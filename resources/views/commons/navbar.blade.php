@@ -8,9 +8,9 @@
         
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Sineup</a> </li>
-                <li class="nav-item"><a href="#" class="nav-link">SLogin</a> </li>
+            <ul class="nav nabar-nav navbar-right">
+                <li>{!! link_to_route('signup.get','Sign up now!',[],['class'=>'btn btn-lg btn-primary']) !!}</li>
+                <li><a href="#" class="nav-link">Login</a> </li>
             </ul>
         </div>
     </nav>
