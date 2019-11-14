@@ -7,7 +7,7 @@
     
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
-            {!! From::open(['route'=>'login.post']) !!}
+            {!! Form::open(['route'=>'login.post']) !!}
                 <div class="form-group">
                     {!! Form::label('email','Email') !!}
                     {!! Form::email('email',old('email'),['class'=>'form-control']) !!}
@@ -17,10 +17,10 @@
                     {!! Form::password('password',['class'=>'form-control']) !!}
                 </div>
 
-                {!! Form::submit('Log in',[''=>'btn btn^primary btn-block']) !!}
-            {!! From::close() !!}
+                {!! Form::submit('Log in',[''=>'btn btn-primary btn-block']) !!}
+            {!! Form::close() !!}
             
-            <p class="mt-2">New user? {!! link_to_route('singup.get','Sign up now') !!}</p>
+            <p class="mt-2">New user? {!! link_to_route('signup.get','Sign up now') !!}</p>
         </div>
         
     </div>
