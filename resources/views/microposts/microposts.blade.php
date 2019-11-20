@@ -1,5 +1,6 @@
 <ul class="media-list">
     @foreach ($microposts as $micropost)
+    
         <li class="media mb-3">
             <img class="mr-2 rounded" src="{{ Gravatar::src($micropost->user->email, 50) }}" alt="">
             <div class="media-body">
@@ -9,12 +10,25 @@
                 <div>
                     <p class="mb-0">{!! nl2br(e($micropost->content)) !!}</p>
                 </div>
-                <div>
-                    @if (Auth::id() == $micropost->user_id)
-                        {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
-                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                        {!! Form::close() !!}
-                    @endif
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div>
+                        @if (Auth::user()->is_favorating($micropost->id))
+                             {!! Form::open(['route' => ['favorites.unfavorite', $micropost->id], 'method' => 'delete']) !!}
+                                {!! Form::submit('Unfavorite', ['class' => 'btn btn-success btn-sm']) !!}
+                            {!! Form::close() !!}
+                        @else
+                            {!! Form::open(['route' => ['favorites.favorite', $micropost->id], 'method' => 'post']) !!}
+                                {!! Form::submit('Favorite', ['class' => 'btn btn-default btn-sm']) !!}
+                            {!! Form::close() !!}
+                        @endif
+                    </div>
+                    <div class="ml-1">
+                        @if (Auth::id() == $micropost->user_id)
+                            {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
+                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+                        @endif
+                    </div>
                 </div>
             </div>
         </li>

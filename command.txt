@@ -1,0 +1,756 @@
+    1  sudo yum -y install http://rpms.famillecollet.com/enterprise/remi-release-6.rem
+    2  sudo yum -y install http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+    3  sudo yum -y install php72 php72-cli php72-common php72-devel php72-gd php72-intl php72-mbstring php72-mysqlnd php72-pdo php72-pecl-mcrypt php72-opcache php72-pecl-apcu php72-pecl-imagick php72-pecl-memcached php72-php-pecl-redis php72-php-pecl-xdebug php72-xml
+    4  sudo alternatives --set php /usr/bin/php-7.2
+    5  php -v
+    6  curl -sS https://getcomposer.org/installer | php
+    7  sudo mv composer.phar /usr/local/bin/composer
+    8  composer about
+    9  sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+   10  ls
+   11  pwd
+   12  mkdir lesson-terminal
+   13  pwd
+   14  dir
+   15  ls
+   16  cd lesson-terminal/
+   17  touch sample.txt
+   18  pwd
+   19  ls
+   20  nano sample.txt
+   21  less sample.txt 
+   22  pwd
+   23  mkdir lesson-php1
+   24  touch test.php
+   25  rm test.php
+   26  cd lesson-php1/
+   27  touch test.php
+   28  ls
+   29  php test.php
+   30  pwd
+   31  ls
+   32  cd lesson-terminal/
+   33  pwd
+   34  ls
+   35  cd ..
+   36  cd lesson-php1/
+   37  php kadai-introduce.php 
+   38  php kadai-fizz
+   39  php kadai-fizzbuzz.php
+   40  cls
+   41  clear
+   42  php kadai-fizzbuzz.php
+   43  clear
+   44  php kadai-fizzbuzz.php
+   45  clear
+   46  php kadai-fizzbuzz.php
+   47  clear
+   48  php kadai-fizzbuzz.php
+   49  pwd
+   50  cd lesson-php
+   51  pwd
+   52  cd kadai-php-3/
+   53  php animal.php 
+   54  pwd
+   55  cd lesson-php
+   56  pwd
+   57  cd kadai-php-3/
+   58  php main.php
+   59  [A
+   60  php main.php
+   61  c
+   62  cd ..
+   63  pwp
+   64  pws
+   65  cls
+   66  pls
+   67  cls
+   68  clear
+   69  pwd
+   70  ls
+   71  cd kadai-php-3-v1.3
+   72  cd kadai-php-3-v1.1
+   73  pwd
+   74  php main.php
+   75  cd php
+   76  cd kadai
+   77  php main.php
+   78  cd ../cd ..
+   79  pwd
+   80  cd ..
+   81  pwd
+   82  php mail.php
+   83  php main.php
+   84  php mail.php
+   85  php main.php
+   86  clear
+   87  wget wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer -O〜/ php-cs-fixer
+   88  wget wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer -O~/ php-cs-fixer
+   89  composer 
+   90  composer require --dev friendsofphp/php-cs-fixer
+   91   ./vendor/bin/php-cs-fixer --version
+   92  ./vendor/bin/php-cs-fixer fix --dry-run ./src
+   93  mkdir ~/bin; mv ~/php-cs-fixer ~/bin
+   94  pwd
+   95  dir
+   96  ls
+   97  ls -a
+   98  ls -aw
+   99  ls --help
+  100  ls -all
+  101  cd vender
+  102  cd vendor/
+  103  pwd
+  104  ls
+  105  ls -a
+  106  ls -all
+  107  cd bin
+  108  ls -al
+  109  ls -all
+  110  cd php-cs-fixer 
+  111  cd ..
+  112  ls -al
+  113  cd friendsofphp/
+  114  ls -all
+  115  cd php-cs-fixer/
+  116  ls -al
+  117  cd ..
+  118  pwd
+  119  cd vendor
+  120  pwd
+  121  ls -al
+  122  cd bin
+  123  ls -all
+  124  php-cs-fixer
+  125  cd 
+  126  pwd
+  127  ls -all
+  128  cd bin
+  129  ls -all
+  130  mv ~/php-cs-fixer ~/bin
+  131  cd ..
+  132  wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.0.0/php-cs-fixer.phar -O ~/php-cs-fixer
+  133  mkdir ~/bin; mv ~/php-cs-fixer ~/bin
+  134  mv ~/php-cs-fixer ~/bin
+  135  ls -al
+  136  cd ..
+  137  mv /home/ec2-user/php-cs-fixer ~/bin
+  138  cd /home/ec2-user
+  139  ls -al
+  140  pwd
+  141  cd ..
+  142  pwd
+  143  ls -al
+  144  cd bin
+  145  ls -all
+  146  cd ..
+  147  cd home
+  148  cd ec2-user/
+  149  ls ^all
+  150  ls -all
+  151  cd bin
+  152  ls -all
+  153  cd php-cs-fixer 
+  154  cd php-cs-fixer
+  155  chmod a+x ~/bin/php-cs-fixer
+  156  ls -all
+  157  pwd
+  158  cd  /lesson-php
+  159  cd lesson-php
+  160  pwd
+  161  test.php
+  162  php test.php
+  163  echo $IP
+  164  echo $PORT
+  165  php -S $IP:$PORT -c php.ini
+  166  echo $PORT
+  167  cd kadai-php-4/
+  168  php -S $IP:$PORT -c php.ini
+  169  ｐｗｄ
+  170  pwd
+  171  cd lesson-php
+  172  ls
+  173  cd kadai-php-4
+  174  ls
+  175  php -S %IP:%PORT -c php.ini
+  176  php -S $IP:$PORT -c php.ini
+  177  cd 
+  178  pwd
+  179  cd environment/
+  180  ls
+  181  clear
+  182  sudo service mysqld start
+  183  sudo service mysqld status
+  184  sudo service mysqld stop
+  185  sudo service mysqld start
+  186  mysql -u root
+  187  sed -e "/utf8/d" -e "/client/d" -e "/^\[mysqld_safe\]$/i character-set-server=utf8\n\n[client]\ndefault-character-set=utf8" /etc/my.cnf |sudo tee /etc/my.cnf
+  188  sudo service mysqld restart
+  189  mysql -u root
+  190  sudo service mysqld start
+  191  mysql -u root
+  192  sudo service mysqld start
+  193  sudo service mysqld status
+  194  mysql -u root
+  195  pwd
+  196  cd /lesson-db
+  197  cd lesson-db
+  198  pwd
+  199  ls
+  200  mysql -u root
+  201  pwd
+  202  mysql -u root
+  203  pwd
+  204  cd ..
+  205  eixt
+  206  exit
+  207  cd mysql-lesson/
+  208  $ php -S $IP:$PORT -c php.ini
+  209  php -S $IP:$PORT -c php.ini
+  210  $ php -S $IP:$PORT -c php.ini
+  211  php -S $IP:$PORT -c php.ini
+  212  php -S $IP:$PORT -c php.ini -t docroot /home/ec2-user/environment/php-lesson/kadai-php-4/contact.php
+  213  php -S $IP:$PORT -c php.ini -t docroot contact.php
+  214  php -S $IP:$PORT -c php.ini -t docroot\contact.php
+  215  php -S $IP:$PORT -c php.ini -t docroot docroot\contact.php
+  216  php -S $IP:$PORT -c php.ini -t docroot contact.php
+  217  php -S $IP:$PORT -c php.ini
+  218  sudo service mysqld status
+  219  sudo service mysqld stop
+  220  php -S $IP:$PORT -c php.ini
+  221  cd php-mysql/
+  222  php -S $IP:$PORT -c php.ini
+  223  php -S $IP:$PORT
+  224  cd php-mysql/
+  225  sudo service mysqld start
+  226  mysql -u root
+  227  sudo service mysqld stop
+  228  php -S $IP:$PORT -c php.ini
+  229  pwd
+  230  cd ..
+  231  pwd
+  232  ls -al
+  233  pwd
+  234  git config --global user.name "ns.choi"
+  235  git config --global user.email "jakeo200b@gmail.com"
+  236  less ~/.gitconfig
+  237  git config --global -l
+  238  mkdir commit-tutorial
+  239  cd com
+  240  cd commit-tutorial/
+  241  pwd
+  242  git init
+  243  ls -all
+  244  git status
+  245  git add index.html
+  246  git status
+  247  git commit
+  248  git status
+  249  git log
+  250  git status
+  251  clear
+  252  git status
+  253  git diff
+  254  git add .
+  255  git status
+  256  git commit -m "add git-logo image"
+  257  git status
+  258  git diff
+  259  git log
+  260  git remote add origin https://github.com/jakeo200b/first-git.git
+  261  git remote -v
+  262  git push origin master
+  263  git remote -v
+  264  cd ..
+  265  cd kadai-commit/
+  266  git init
+  267  pwd
+  268  git -v
+  269  git diff
+  270  git status
+  271  git add sample.php
+  272  git status
+  273  git add . -m "add sample.php"
+  274  git commit . -m "add sample.php"
+  275  git status
+  276  git diff
+  277  git log
+  278  git diff
+  279  git add sample.php
+  280  git status
+  281  git commit sample.php -m "update sample.php"
+  282  git log
+  283  git status
+  284  git add .
+  285  git status
+  286  git commit . -m "add omikuji function"
+  287  git remote add origin https://github.com/jakeo200b/kadai-commit.git
+  288  git push -u origin master
+  289   cd ~/environment/
+  290  git clone https://github.com/techacademy-jp/git-training-sample.git ignore-tutorial
+  291  cd ignore-tutorial
+  292  ls -all
+  293  touch sample.html
+  294  git status
+  295  pwd
+  296  ls -all
+  297  touch .gitignore
+  298  ls -all
+  299  git status
+  300  git add .gitignore
+  301  git commit -m 'add .gitignore'
+  302  git status
+  303  mysql -u root
+  304  cat /proc/version
+  305  cat /etc/sysconfig/clock
+  306  ls -F /usr/share/zoneinfo
+  307  ms5sum /usr/share/zoneinfo/Asia/Tokyo
+  308  md5sum /usr/share/zoneinfo/Asia/Tokyo
+  309  php -v
+  310  sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+  311  cd ~/environment/
+  312  composer create-project laravel/laravel ./message-board "5.5.#" --prefer-dist
+  313  composer create-project laravel/laravel ./message-board "5.5.*" --prefer-dist
+  314  cd message-board/
+  315  git init
+  316  git add .
+  317  git status
+  318  git add .
+  319  git status
+  320  git commit -m "init Laravel Project"
+  321  git state
+  322  git status
+  323  php artisan serve --host=$IP --port=$PORT
+  324  php artisan list
+  325  php -a
+  326  php artisan tinker
+  327  php artisan
+  328  cd message-board/
+  329  php artisan tinker
+  330  sudo service mysqld status
+  331  sudo service mysqld start
+  332  php artisan tinker
+  333  git status
+  334  cd message-board/
+  335  git status
+  336  git diff
+  337  git add .
+  338  git commit -m 'set timezone'
+  339  mysql -v
+  340  mysql --version
+  341  php artisan make:migration create_messages_table --create=messages
+  342  cd message-board/
+  343  php artisan make:migration create_messages_table --create=messages
+  344  php artisan migrate
+  345  sudo service mysqld status;
+  346  sudo service mysqld start
+  347  git status
+  348  git diff
+  349  git add .
+  350  git commit -m 'add messages table'
+  351  php artisan make:model Message
+  352  php artisan tinker
+  353  git status
+  354  git diff
+  355  git add .
+  356  git status
+  357  git commit -m 'message model'
+  358  git status
+  359  php artisan make:controller MessagesController --resource
+  360  php artisan route:list
+  361  git history
+  362  git log
+  363  cd message-board/
+  364  git history
+  365  git log
+  366   
+  367  php artisan route:list
+  368  cd
+  369  cd environment/
+  370  cd message-board/
+  371  git log
+  372  history
+  373  history > commend_history_1109.txt
+  374  php artisan route:list
+  375  composer require "laravelcollection/html":"5.5.*"
+  376  composer require "laravelcollective/html":"5.5.*"
+  377  git diff
+  378  git status
+  379  git add .
+  380  git status
+  381  pwd
+  382  nano /home/ec2-user/.composer/auth.json
+  383  ls /home/ec2-user/.composer/
+  384  del auth.json
+  385  del /home/ec2-user/.composer/auth.json 
+  386  del /home/ec2-user/.composer/auth.json
+  387  rm /home/ec2-user/.composer/auth.json
+  388  ls /home/ec2-user/.composer/
+  389  cd message-board/
+  390  sudo service mysqld start
+  391  sudo service mysqld status
+  392  mysql -u root
+  393  cd message-board/
+  394  git status
+  395  git add .
+  396  git status
+  397  git commit -m 'CRUD messages'
+  398  git status
+  399  php artisan serve --host=$IP --port=$PORT
+  400  php artisan tinker
+  401  sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+  402  composer create-project laravel/laravel ./tasklist "5.5.*" --prefer-dist
+  403  cd tasklist/
+  404  ls
+  405  git init
+  406  git status
+  407  git add .
+  408  git commit -m "init Laravel Project
+  409  "
+  410  php artisan serve --host=$IP --port=$PORT
+  411  sudo service mysqld start
+  412  php artisan make:migration create_tasks_table --create=tasks
+  413  ]
+  414  php artisan migrate
+  415  php artisan make:model Task
+  416  php artisan make::controller TasksController --resource
+  417  php artisan make:controller TasksController --resource
+  418  php artisan route:list
+  419  composer require "laravelcollective/html":"5.5.*"
+  420  git status
+  421  git -add .
+  422  git add .
+  423  git status
+  424  git commit -M "add controller"
+  425  git commit -m "add controller"
+  426  cd tasklist/
+  427  php artisan tinkle
+  428  php artisan serve --host=$IP --port=$PORT
+  429  mysql -u root
+  430  php artisan serve --ip=$IP --port=$PORT
+  431  cd tasklist/
+  432  php artisan serve --ip=$IP --port=$PORT
+  433  php artisan serve --host=$IP --port=$PORT
+  434  git status
+  435  git add .
+  436  git status
+  437  git commit -m "add view,controller"
+  438  git remote add origin https://github.com/jakeo200b/kadai-tasklist.git
+  439  git remote -v
+  440  git push origin master
+  441  git remote -v
+  442  git status
+  443  git push origin :master
+  444  git push origin master
+  445  git merge --allow-unrelated-histories origin/master
+  446  git fech
+  447  git fetch
+  448  git merge origin/master
+  449  git status
+  450  git fetch
+  451  git push origin master
+  452  git merge --allow-unrelated-histories
+  453  git merge
+  454  git push
+  455  git push origin master
+  456  git push
+  457  git merge
+  458  git merge --allow-unrelated-histories
+  459  git push origin master
+  460  git pull
+  461  git pull origin master
+  462  git push origin master
+  463  git checkout master
+  464  git fetch upstream
+  465  git merge upstream/master
+  466  git diff
+  467  git status
+  468  git rebase -i master
+  469  git status
+  470  git diff
+  471  git push origin master
+  472  git fetch
+  473  git push
+  474  git push origin master
+  475  git fetch
+  476  git merge origin/master
+  477  git fetch origin
+  478  git merge origin master
+  479  git pull origin master
+  480  git pull origin master  --allow-unrelated-histories
+  481  git push origin master
+  482  php artisan tinker
+  483  sudo service mysqld start
+  484  cd message
+  485  cd message-board/
+  486  php artisan serve --host:$IP --port:$PORT
+  487  php artisan serve --HOST:$IP --port:$PORT
+  488  php artisan serve --HOST=$IP --port=$PORT
+  489  cd message-board/
+  490  php artisan make:migration add_title_to_messages_table --table=messages
+  491  php artisan migrate
+  492  cd tasklist/
+  493  php artisan make:migration add_title_to_tasks_table --table=tasks
+  494  php artisan migrate
+  495  php artisan serve --host=$IP --port=$PORT
+  496  git add .
+  497  git status
+  498  git commit -m 'add column'
+  499  git status
+  500  cd ..
+  501  cd tasklist/
+  502  ls
+  503  php artisan serve --host=$IP --port:$PORT
+  504  mysql -u root
+  505  php artisan serve --host=$IP --port=$PORT
+  506  cd tasklist/
+  507  php artisan serve --host=$IP --post=$PORT
+  508  sudo service mysqld start
+  509  cd tasklist/
+  510  git add .
+  511  git status
+  512  git commit -m "add column,validate"
+  513  git status
+  514  git push origin master
+  515  php artisan serve --host=$IP --port=$PORT
+  516  cd ..
+  517  cd message-board/
+  518  php artisan make:seeder MessagesTableSeeder
+  519  php artisan db:seed --class=MessagesTableSeeder
+  520  cd ..
+  521  cd message-board/
+  522  php artisan migrate:refresh --seed
+  523  git status
+  524  git add .
+  525  git status
+  526  git commit -m "add paginate,testdata"
+  527  cd ..
+  528  cd tasklist/
+  529  php artisan serve --host=$IP --port=$PORT
+  530  cd ..
+  531   cd tasks
+  532  cd tasklist
+  533  ls
+  534  php artisan make:seeder TaskTableSeeder
+  535  php artisan db:seed --TasksTableSeeder
+  536  php artisan db:seed --class=TasksTableSeeder
+  537  git diff
+  538  git status
+  539  php artisan db:seed --class=TasksTableSeeder
+  540  php artisan make:seeder TasksTableSeeder
+  541  php artisan db:seed --class=TasksTableSeeder
+  542  git diff
+  543  php artisan db:seed --class=TasksTableSeeder
+  544  ]
+  545  php artisan migrate:refresh --seed
+  546  php artisan serve --host=$IP --port=$PORT
+  547  cd tasklist/
+  548  sudo service mysqld start
+  549  php artisan serve --host=$IP --port=$PORT
+  550  wget https://cli-assets.heroku.com/heroku-linux-x64.tar.gz -O heroku.tar.gz
+  551  sudo mkdir -p /usr/local/lib/heroku
+  552  sudo tar --strip-components 1 -zxvf heroku.tar.gz -C /usr/local/lib/heroku
+  553  sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+  554  horoku login -i
+  555  cd ..
+  556  heroku login -i
+  557  cd message-board/
+  558  heroku 
+  559  heroku create message-board-jakeob
+  560  heroku apps
+  561  git remote -v
+  562  git status
+  563  echo "web: vendor/bin/heroku-php-apache2 public/" > Procfile
+  564  git add .
+  565  git commit -m 'Procfile'
+  566  git status
+  567  git push heroku master
+  568  heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)
+  569  heroku config
+  570  heroku addons:create heroku-postgresql:hobby-dev
+  571  heroku config
+  572  heroku config:set DB_CONNECTION=pgsql DB_USERNAME=knisilglmyrxia DB_PASSWORD=71b7f30800351ad1567c18ecbb1fa2d9129ae9feb06c31ebe1b0e55717c79274 DB_HOST=ec2-54-235-180-123.compute-1.amazonaws.com DB_DATABASE=d5nuoof6hjh7pn
+  573  heroku config
+  574  heroku run php artisan migrate
+  575  heroku logs
+  576  heroku config:set APP_LOG=errorlog
+  577  $ heroku logs --tail
+  578  heroku logs --tail
+  579  cd ..
+  580  cd tasklist/
+  581  git status
+  582  git add .
+  583  git status
+  584  git 
+  585  git status
+  586  git add .
+  587  git status
+  588  git commit -m "add test,paginate"
+  589  git push origin master
+  590  git status
+  591  heroku create tasklist-jakeo200b
+  592  heroku apps
+  593  git remote -v
+  594  echo "web: vendor/bin/heroku-php-apache2 public/" > Procfile
+  595  git add .
+  596  git commit -m 'add Procfile'
+  597  git push heroku master
+  598  heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)
+  599  heroku config
+  600  heroku addons:create heroku-postgresql:hobby-dev
+  601  heroku config
+  602  heroku config:set DB_CONNECTION=pgsql DB_USERNAME=qtdvzcnjupbvsu DB_PASSWORD=ec35619b95cc9fbda0cc11d0b1b53b972fa13c2fcd1d70133b0abe6c61e68009 DB_HOST=ec2-54-83-9-169.compute-1.amazonaws.com DB_DATABASE=d9d4bog2k18ms9
+  603  heroku config
+  604  heroku run php artisan migrate
+  605  cd ..
+  606  sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+  607  composer create-project laravel/laravel ./microposts "5.5.*" --prefer-dist
+  608  cd microposts/
+  609  ls
+  610  git init
+  611  git add .
+  612  git commit -m 'init'
+  613  git status
+  614  cd microposts/
+  615  git status
+  616  git log
+  617  sudo service mysqld status
+  618  sudo service mysqld start
+  619  mysql -u 
+  620  mysql -u  root
+  621  php artisan tinker
+  622  git status
+  623  git add .
+  624  git commit -m 'set timezone'
+  625  git status
+  626  git add .
+  627  git status
+  628  git commit -m 'top page'
+  629  php artisan migrate
+  630  sudo service mysqld status
+  631  sudo service mysqld stop
+  632  sudo service mysqld start
+  633  use App\User
+  634  User::all() ;
+  635  User::all()
+  636  php artisan tinker
+  637  composer require "laravelcollective/html":"5.5.*"
+  638  git status 
+  639  git diff
+  640  git add .
+  641  git status
+  642  git commit -m 'user registration'
+  643  git add .
+  644  git status
+  645  git commit -m 'user login'
+  646  php artisan serve --host=$IP --port=$PORT
+  647  cd microposts/
+  648  git status
+  649  git diff
+  650  git log
+  651  git diff
+  652  git reset head 
+  653  git checkout HEAD .
+  654  git diff
+  655  git status
+  656  cd microposts/
+  657  sudo service mysqld start
+  658  mysql -u root
+  659  cd microposts/
+  660  php artisan make:controller UsersController
+  661  composer require "thomaswelton/laravel-gravatar":"~1.0"
+  662  php artisan serv host=$IP port=$PORT
+  663  php artisan serve host=$IP port=$PORT
+  664  php artisan serve --host=$IP --port=$PORT
+  665  cd microposts/
+  666  sudo service mysqld start
+  667  cd microposts/
+  668  git status
+  669  git diff
+  670  git add .
+  671  git commit -m 'user pages'
+  672  php artisan make:migration create_microposts_table --create=microposts
+  673  php artisan serve --host=$IP --port=$PORT
+  674  cd microposts/
+  675  sudo service mysqld start
+  676  php artisan serve --host=$IP --port=$PORT
+  677  cd microposts/
+  678  sodu service mysqld start
+  679  sodo service mysqld start
+  680  sudo service mysqld start
+  681  cd microposts/
+  682  php artisan make:migration create_microposts_table --create=microposts
+  683  php artisan migrate
+  684  git status
+  685  php artisan migrate
+  686  mysql -u root
+  687  cd microposts/
+  688  php artisan make:model Micropost
+  689  cd microposts/
+  690  use App\User
+  691  php tinker
+  692  cd microposts/
+  693  sudo service mysqld start
+  694  php artisan tinker
+  695  php artisan make:controller MicropostsController
+  696  php artisan serve --host=$IP --port=$PORT
+  697  git add .
+  698  git push -m 'post'
+  699  git commit -m 'post'
+  700  cd ..
+  701  cd tasklist/
+  702  git status
+  703  sudo service mysqld start
+  704  php artisan serve --host=$IP --port=$PORT
+  705  cd tasklist/
+  706  ls
+  707  sudo service mysqld start
+  708  php artisan serve --host=$IP --port=$PORT
+  709  sudo service mysqld service
+  710  sudo service mysqld start
+  711  cd tasklist
+  712  php artisan migrate
+  713  sudo service mysqld start
+  714  cd tasklist/
+  715  php artisan migrate::reset
+  716  php artisan migrate:reset
+  717  php artisan migrate
+  718  mysql -u root
+  719  php artisan serve --host=$IP --port=$PORT
+  720  cd tasklist/
+  721  php artisan serve --host=$IP --port=$PORT
+  722  php artisan make:migration create_user_follow_table --create=user_follow
+  723  cd ..
+  724  cd microposts/
+  725  php artisan make:migration create_user_follow_table --create=user_follow
+  726  php artisan tinker
+  727  git status
+  728  git add .
+  729  git commit -m 'follow,unfollow'
+  730  git status
+  731  git add .
+  732  git commit -m 'timeline'
+  733  git remote -v
+  734  heroku login -i
+  735  heroku create microposts-jakeo200b
+  736  git remote -v
+  737  echo "web: vendor/bin/heroku-php-apache2 public/" > Procfile
+  738  git add .
+  739  git commit -m 'Procfile'
+  740  git push heroku master
+  741  heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)
+  742  heroku config
+  743  heroku addons:create heroku-postgresql:hobby-dev
+  744  heroku config
+  745  heroku config:set DB_CONNECTION＝pgsql
+  746  heroku config:set DB_USERNAME=jcpitomfslqofp
+  747  heroku config
+  748  heroku config:set DB_PASSWORD=aed67925dc0afe3852296a77ed0ebc3f29500a412ba75691eb132e85a39f5e09
+  749  heroku config:set DB_HOST=ec2-107-21-226-44.compute-1.amazonaws.com
+  750  heroku config:set DB_DATABASE=dkn2rll6a00mc
+  751  heroku config
+  752  heroku config:set DB_CONNECTION=pgsql
+  753  heroku config
+  754  heroku run php artisan migrate
+  755  history 
+  756  history > command
